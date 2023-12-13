@@ -1,0 +1,21 @@
+html
+    head
+        link(rel='stylesheet', href='/public/common.css')
+        link(rel='stylesheet', href='/public/playing.css')
+    body
+        h1.text 현재 상영 중인 영화
+        div.text=date+' 기준'
+        div.m_all
+            each movie in movielist
+                div.m
+                    img.m_img(src='https://www.themoviedb.org/t/p/w220_and_h330_face/'+movie.poster_path)
+                    div.m_content
+                        p.m_title=movie.original_title
+                        div.percent=Math.round(movie.vote_average * 10)+'%'
+                        p=movie.release_date
+        div.page
+            div(class='more', onClick="more("+less+")") 이전 페이지
+            div(class="more", onClick="more("+page+")") 다음 페이지
+
+        script(src='/public/playing.js')
+

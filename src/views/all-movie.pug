@@ -1,0 +1,25 @@
+html
+    head
+        link(rel='stylesheet', href='/public/common.css')
+        link(rel='stylesheet', href='/public/all-movie.css')
+    body
+        div.list_div
+            p.list_title 장르 선택
+            ul#genrelist
+                each genre in genres
+                    li.genre=genre.name
+
+        div.list_div
+            p.list_title 영화 목록
+            div.m_all
+                each result in results 
+                    div.m
+                        img.m_img(src='https://www.themoviedb.org/t/p/w220_and_h330_face/'+result.poster_path)
+                        div.m_content
+                            p.m_title=result.original_title
+                            div.percent=Math.round(result.vote_average * 10)+'%'
+                            p=result.release_date
+
+
+        script(src='/public/all-movie.js')
+

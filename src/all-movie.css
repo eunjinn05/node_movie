@@ -1,0 +1,21 @@
+#genrelist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre {
+    border: solid 1px gray;
+    border-radius: 20%;
+    padding : 2px;
+    margin : 2px;
+}
+
+.list_title {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.list_div {
+    border: solid 1px gray;
+
+}

@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+.m {
+    /* float : left; */
+    display:flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    margin: 5px 5px 5px 5px;
+    border: solid gray 1px ;
+    border-radius: 5px;
+    width : 20%;
+    top: 0;
+    left: 0;
+}
+
+.m_title {
+    width : 95%;
+    display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m_img {
+    border-radius: 5px;
+    width:100%;
+}
+
+.m_content {
+    padding : 5% 5% 5% 5%;
+
+}
+
+.m_all {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
